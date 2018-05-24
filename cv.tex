@@ -1,0 +1,223 @@
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{0pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{1}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{1}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\mbox{~}\makebox[6.762in][l]{\Large #1} \vphantom{p\^{E}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingNONIT}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1}, #2 & \textit{#4} \\
+\end{tabular*}\vspace{2mm}\newline#3\vspace{1mm}}
+\newcommand{\ressubheadingNONITtwo}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #4 \\
+    \textit{#2} & \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\huge Arun Dunna} & \textbf{\today} \\
+Research Assistant & \href{mailto:adunna@cs.umass.edu}{adunna@cs.umass.edu} \\
+ & \href{https://adunna.me}{https://adunna.me} \\
+ & (404) 477-8660 \\
+\end{tabular*}
+\\
+
+\resheading{Research Interests}
+
+Network measurement, networks, censorship circumvention, improving digital privacy/security, and predicting financial markets through stochastic models.
+
+\resheading{Education}
+
+\begin{itemize}
+
+\item[]
+
+	\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Current}
+
+  \begin{itemize}
+		\resitem{Advisor: Phillipa Gill}
+
+	\end{itemize}
+
+\item[]
+
+	\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science and Mathematics}{Aug. 2016 -- May 2018}
+
+  \begin{itemize}
+
+    \resitem{Research emphasis on network measurement, with courses focusing on networks and machine learning}
+		\resitem{Advisor: Phillipa Gill}
+
+	\end{itemize}
+
+\end{itemize}
+
+\resheading{Research}
+
+\begin{itemize}
+
+\item[]
+
+	\ressubheading{Calipr Lab}{Amherst, MA}{Advisor: Phillipa Gill}{Jan. 2017 -- Current}
+
+  \begin{itemize}
+		\resitem{\textbf{Multi-CDN}\newline A study into performances of CDNs over time, varied by country, source AS, destination AS, and client. Compared local vs. remote caching, and do studies on developing regions and IPV4 vs. IPV6. Pinpointed strategies in Microsoft's and Apple's deployment of CDNs for delivering software updates to clients, and identified impacts of client CDN migration and changes in CDN routing.\newline}
+
+    \resitem{\textbf{China's Firewall and Unpublished Tor Bridges}\newline A revisit to a series of papers published in 2012 and 2015, taking an updated look at how the Great Firewall of China (GFC) blocks unpublished tor relays, specifically bridge relays. We performed in-depth fingerprinting of GFC active scanners, how the GFC performs deep packet inspection (DPI) to determine the presence of Tor traffic, and proposed and tested circumvention methods for Chinese Tor users.}
+
+	\end{itemize}
+
+\end{itemize}
+
+\newpage
+
+\resheading{Experience}
+
+\begin{itemize}
+
+\item[]
+
+\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Departmental Assistant}{May 2018 -- Aug. 2018}
+
+\begin{itemize}
+  \resitem{Departmental assistant in Computer Science department to perform research in Calipr Lab, focused in network theory and coding theory. Working on multiple networks projects, such as Multi-CDN and analyzing China's firewall.}
+
+\end{itemize}
+
+\item[]
+
+\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Research Experience for Undergraduates}{May 2017 -- Aug. 2017}
+
+\begin{itemize}
+  \resitem{Awarded stipend from grant to work in Calipr Lab at UMass on network measurement projects, most notably MultiCDN. Worked on projects throughout the summer, and did key parts of analysis for the final paper.}
+
+\end{itemize}
+
+\item[]
+
+	\ressubheading{nMomentum Corporation}{Atlanta, GA}{DevOps}{Jan. 2010 -- Current}
+
+  \begin{itemize}
+		\resitem{Deploy \& manage critical network infrastructure (web/storage servers, encrypted file systems, secure remote file synchronization). Develop websites and software for company and its clients.}
+
+	\end{itemize}
+
+  \item[]
+
+  	\ressubheading{Aura Political Group}{Atlanta, GA}{Information Technology Specialist}{Aug. 2015 -- Aug. 2016}
+
+    \begin{itemize}
+  		\resitem{Developed software and websites for clients. Deployed and managed encrypted communication servers for secure communications between firm and clients.}
+
+  	\end{itemize}
+
+\end{itemize}
+
+\resheading{Publications}
+
+\begin{enumerate}
+ \item Arun Dunna, Ciar\'an O'Brien, Rachee Singh, and Phillipa Gill. {\it Analyzing China's Blocking of Unpublished Tor Bridges}. Submitted to FOCI 2018, Baltimore, MD.
+ \item Rachee Singh, Arun Dunna, and Phillipa Gill. {\it Characterizing the Deployment and Performance of Multi-CDNs}. Submitted to IMC 2018, Boston, MA.
+\end{enumerate}
+
+\resheading{Presentations}
+
+\begin{itemize}
+\item
+    {\it \href{https://github.com/adunna/690b-china/blob/master/Presentation/690B%20Project%20Presentation.pdf}{A Study of Tor Relay Blocking in China}}
+    \begin{itemize}
+        \item CS 690B Course Project (Presentation) -- Amherst, MA (May 2018)
+    \end{itemize}
+
+\end{itemize}
+
+\resheading{Skills}
+
+\begin{itemize}
+\item \textbf{Languages:} Bash, Bro, C, C++, C\#, CSS, HTML, Java, JavaScript, LaTeX, Lua, PHP, Python, R, Ruby, SQL, XML
+    \item \textbf{Platforms:}
+Android, Unix, Windows
+        \item \textbf{Specializations:}
+    Cryptography, cybersecurity, Internet measurement, machine learning, networking, software/web development, Unix systems
+
+\end{itemize}
+
+\newpage
+
+\resheading{Projects}
+
+\begin{itemize}
+\item
+    \ressubheadingNONIT{sCTF}{\href{https://sctf.io}{https://sctf.io}}{Founded online capture-the-flag competition focused on K-12 students. Largest had over 4000 competitors (K-12 and university students, industry professionals), and 56000 problem submissions.}{Dec. 2014 -- Jan. 2018}
+    \item
+        \ressubheadingNONIT{STASiS}{\href{https://github.com/adunna/STASiS}{https://github.com/adunna/STASiS}}{Situational Analysis System: A tool for automatically monitoring for specific situations, such as a fire or a drunk driver, through visual input (picture or video), machine learning, and statistical analysis, all packaged with a nice front-end. Developed in 36 hours at HackUMass 2016, winner of MITRE Award.}{Oct. 2016}
+\end{itemize}
+
+\resheading{Awards}
+
+\begin{itemize}
+\item
+    \ressubheadingNONITtwo{NSF Research Experience for Undergraduates}{National Science Foundation}{}{Summer 2017}
+
+    \item
+        \ressubheadingNONITtwo{Dean's List Honors}{University of Massachusetts Amherst}{}{Aug. 2016 - May 2018}
+
+    \item
+        \ressubheadingNONITtwo{Chancellor's Award Scholarship}{University of Massachusetts Amherst}{}{Aug. 2016 - May 2018}
+
+      \item
+          \ressubheadingNONITtwo{MITRE Award (STASiS)}{HackUMass}{}{Oct. 2016}
+\end{itemize}
+
+\end{document}
