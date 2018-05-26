@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.5.15)  24 MAY 2018 02:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.5.15)  26 MAY 2018 13:13
 entering extended mode
  \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **resume.tex
 (./resume.tex
@@ -313,7 +312,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume.pdf (2 pages, 85609 bytes).
+Output written on resume.pdf (2 pages, 84871 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
