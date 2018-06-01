@@ -51,6 +51,12 @@
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingfive}[5]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+    #5 & \\
+\end{tabular*}\vspace{-6pt}}
 \newcommand{\ressubheadingNONIT}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#4} \\
@@ -92,7 +98,7 @@ Network measurement, networks, censorship circumvention, improving digital priva
 
 \item[]
 
-	\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science and Mathematics}{Aug. 2016 -- May 2018}
+	\ressubheadingfive{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science, Minor: Mathematics}{Aug. 2016 -- May 2018}{GPA: 3.56}
 
   \begin{itemize}
 
@@ -167,7 +173,7 @@ Network measurement, networks, censorship circumvention, improving digital priva
 \resheading{Publications}
 
 \begin{enumerate}
- \item Analyzing China's Blocking of Unpublished Tor Bridges. Arun Dunna, Ciar\'an O'Brien, Rachee Singh, and Phillipa Gill. Submitted to FOCI 2018. Baltimore, MD.
+% \item Analyzing China's Blocking of Unpublished Tor Bridges. Arun Dunna, Ciar\'an O'Brien, and Phillipa Gill. Submitted to FOCI 2018. Baltimore, MD.
  \item Characterizing the Deployment and Performance of Multi-CDNs. Rachee Singh, Arun Dunna, and Phillipa Gill. Submitted to IMC 2018. Boston, MA.
 \end{enumerate}
 
