@@ -1,6 +1,5 @@
 \documentclass[letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
-\pagestyle{empty}
 \raggedbottom
 \raggedright
 \usepackage[svgnames]{xcolor}
@@ -8,6 +7,16 @@
 \usepackage{tocloft}
 \usepackage{etoolbox}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\makebox[\textwidth][l]{Arun Dunna - CV}}
+\rfoot{\makebox[\textwidth][r]{\thepage\ of \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
 \robustify\cftdotfill
 
 
