@@ -9,12 +9,11 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{enumitem}
 \robustify\cftdotfill
 
 \pagestyle{fancy}
 \fancyhf{}
-\lfoot{\makebox[\textwidth][l]{Arun Dunna - Resume}}
-\rfoot{\makebox[\textwidth][r]{\thepage\ of \pageref{LastPage}}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -37,17 +36,17 @@
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.5in}
+\setlength{\textheight}{10in}
 \setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
+\setlength{\topmargin}{-0.5in}
 \setlength{\topskip}{0in}
-\setlength{\voffset}{0.1in}
+\setlength{\voffset}{0in}
 
 
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{8pt}
+\newcommand{\resheading}[1]{\vspace{2pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
 \setlength{\fboxsep}{0pt}{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\mbox{~}\makebox[6.762in][l]{\Large #1} \vphantom{p\^{E}}}}}
@@ -58,22 +57,21 @@
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
+\end{tabular*}}
 \newcommand{\ressubheadingfive}[5]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
     #5 & \\
-\end{tabular*}\vspace{-6pt}}
+\end{tabular*}}
 \newcommand{\ressubheadingNONIT}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#4} \\
-\end{tabular*}\vspace{2mm}\newline#3\vspace{1mm}}
+\end{tabular*}}
 \newcommand{\ressubheadingNONITtwo}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{#1} & \textit{#4} \\
-    \textit{#2} & \\
-\end{tabular*}\vspace{-6pt}}
+		#1 & \textit{#4} \\
+\end{tabular*}}
 %-----------------------------------------------------------
 
 
@@ -82,13 +80,17 @@
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 \textbf{\huge Arun Dunna} & \textbf{\today} \\
 Software Engineer & \href{mailto:adunna@pm.me}{adunna@pm.me} \\
-PhD Student & \href{https://adunna.me}{https://adunna.me} \\
+PhD Student (on leave) & \href{https://adunna.me}{https://adunna.me} \\
 \end{tabular*}
 \\
 
-\resheading{Education}
+\resheading{Education}\vspace{-11pt}
 
-\begin{itemize}
+\begin{itemize}[itemsep=-1mm]
+
+\item[]
+
+	\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Ph.D. Computer Science}{Sep. 2019 -- TBD}
 
 \item[]
 
@@ -100,9 +102,9 @@ PhD Student & \href{https://adunna.me}{https://adunna.me} \\
 
 \end{itemize}
 
-\resheading{Experience}
+\vspace{-11pt}\resheading{Experience}\vspace{-11pt}
 
-\begin{itemize}
+\begin{itemize}[itemsep=-2mm]
 
 \item[]
 
@@ -114,68 +116,62 @@ PhD Student & \href{https://adunna.me}{https://adunna.me} \\
 
 \item[]
 
-\ressubheading{IIJ Innovation Institute}{Tokyo, JP}{Research Intern}{Jun. 2019 -- Aug. 2019}\newline
+\ressubheading{IIJ Innovation Institute Research Lab}{Tokyo, JP}{Research Intern}{Jun. 2019 -- Aug. 2019}\newline
 
 \item[]
 
-\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Research Assistant}{Sep. 2017 -- Jan. 2021}\newline
-
-\item[]
-
-\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Research Experience for Undergraduates}{May 2017 -- Sep. 2017}\newline
-
-\item[]
-
-\ressubheading{nMomentum Corporation}{Atlanta, GA}{DevOps}{Jan. 2010 -- Dec. 2020}
+\ressubheading{University of Massachusetts Amherst}{Amherst, MA}{Research Assistant}{May 2017 -- Jan. 2021}\newline
 
 \end{itemize}
 
-\resheading{Publications}
+\vspace{-11pt}\resheading{Publications}\vspace{-11pt}
 
-\begin{enumerate}
- \item \textbf{Arun Dunna}, Zachary Bischof, and Romain Fontugne. Sanitizing a View of Consumer Broadband in the United States. \textit{Network Traffic Measurement and Analysis Conference (TMA)}. Berlin, Germany. Jun. 2020. \textbf{(AR 33\%, Best Open Dataset Award)}
-\item Rachee Singh, \textbf{Arun Dunna}, and Phillipa Gill. Characterizing the Deployment and Performance of Multi-CDNs. \textit{ACM Internet Measurement Conference (IMC)}. Boston, MA. Oct. 2018. \textbf{(AR 23\%)}
-\item \textbf{Arun Dunna}, Ciar\'an O'Brien, and Phillipa Gill. Analyzing China's Blocking of Unpublished Tor Bridges. \textit{USENIX Workshop on Free and Open Communications on the Internet (FOCI)}. Baltimore, MD. Aug. 2018. \textbf{(AR 39\%)}
+\begin{enumerate}[itemsep=-1mm]
+\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Sanitizing a View of Consumer Broadband in the United States}}}{}{}{TMA, Jun. 2020}
+\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Characterizing the Deployment and Performance of Multi-CDNs}}}{}{}{ACM IMC, Oct. 2018}
+\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Analyzing China's Blocking of Unpublished Tor Bridges}}}{}{}{USENIX FOCI, Aug. 2018}
+%\item \textbf{Arun Dunna}, Zachary Bischof, and Romain Fontugne. Sanitizing a View of Consumer Broadband in the United States. \textit{Network Traffic Measurement and Analysis Conference (TMA)}. Berlin, Germany. Jun. 2020. \textbf{(AR 33\%, Best Open Dataset Award)}
+%\item Rachee Singh, \textbf{Arun Dunna}, and Phillipa Gill. Characterizing the Deployment and Performance of Multi-CDNs. \textit{ACM Internet Measurement Conference (IMC)}. Boston, MA. Oct. 2018. \textbf{(AR 23\%)}
+%\item \textbf{Arun Dunna}, Ciar\'an O'Brien, and Phillipa Gill. Analyzing China's Blocking of Unpublished Tor Bridges. \textit{USENIX Workshop on Free and Open Communications on the Internet (FOCI)}. Baltimore, MD. Aug. 2018. \textbf{(AR 39\%)}
 \end{enumerate}
 
-\newpage
+\vspace{-11pt}\resheading{Skills}\vspace{-11pt}
 
-\resheading{Skills}
-
-\begin{itemize}
+\begin{itemize}[itemsep=-1mm]
 \item \textbf{Languages:} C++, CSS, HTML, Java, JavaScript, LaTeX, Lua, PHP, Python, R, Rust, SQL, Zeek
 \item \textbf{Platforms:} Android, Unix \& Unix-like, Web, Windows
-\item \textbf{Specializations:} Censorship systems, cryptography, cybersecurity, Internet law, Internet measurement, machine learning, machine learning platforms and pipelines, networking, software/web development, Unix \& Unix-like systems
-\item \textbf{Technologies:} git, Mercurial, ML frameworks, MySQL, NLP frameworks, numpy, React, scipy
+\item \textbf{Specializations:} Censorship systems, cryptography, cybersecurity, Internet policy, Internet measurement, machine learning, machine learning pipelines, networks, Unix \& Unix-like systems
+\item \textbf{Technologies:} git, Mercurial, MySQL, numpy, OpenCV, PyTorch, React, sklearn, spaCy, scipy
 
 \end{itemize}
 
-\resheading{Projects}
+\vspace{-11pt}\resheading{Projects}\vspace{-11pt}
 
-\begin{itemize}
-\item
-\ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{github.com/adunna/tase}}{Scalable and modular synchronization framework designed to associate positions in text with positions in corresponding audio. Primary example is timestamp position in audiobook with word position in ebook. Implemented using DeepSpeech.}{Sep. 2018 -- Feb. 2019}
-\item
-\ressubheadingNONIT{sCTF}{\href{https://sctf.io}{sctf.io}}{Founded online capture-the-flag competition focused on K-12 students. Largest had over 4000 competitors (K-12 and university students, industry professionals), and 56000 problem submissions.}{Dec. 2014 -- Jan. 2018}
-\item
-\ressubheadingNONIT{STASiS}{\href{https://adunna.me/stasis-project/}{adunna.me/stasis-project/}}{Situational Analysis System: A tool for automatically monitoring for specific situations, such as a fire or a drunk driver, through visual input (picture or video), machine learning, and statistical analysis, all packaged with a nice front-end. Developed in 36 hours at HackUMass 2016, winner of MITRE Award for Project in Best Interest of Community.}{Oct. 2016}
+\begin{itemize}[itemsep=-1mm]
+	\item \ressubheadingNONIT{OverStat}{\href{https://overstat.us}{overstat.us}}{}{Dec. 2020 -- Current}
+\item \ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{github.com/adunna/tase}}{}{Sep. 2018 -- Feb. 2019}
+\item \ressubheadingNONIT{sCTF}{\href{https://adunna.me/sctf-project/}{sctf.io}}{}{Dec. 2014 -- Jan. 2018}
+%\item \ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{github.com/adunna/tase}}{Scalable and modular synchronization framework designed to associate positions in text with positions in corresponding audio. Primary example is timestamp position in audiobook with word position in ebook. Implemented using DeepSpeech.}{Sep. 2018 -- Feb. 2019}
+%\item \ressubheadingNONIT{sCTF}{\href{https://adunna.me/sctf-project/}{sctf.io}}{Founded online capture-the-flag competition focused on K-12 students. Largest had over 4000 competitors (K-12 and university students, industry professionals), and 56000 problem submissions.}{Dec. 2014 -- Jan. 2018}
+%\item
+%\ressubheadingNONIT{STASiS}{\href{https://adunna.me/stasis-project/}{adunna.me/stasis-project/}}{Situational Analysis System: A tool for automatically monitoring for specific situations, such as a fire or a drunk driver, through visual input (picture or video), machine learning, and statistical analysis, all packaged with a nice front-end. Developed in 36 hours at HackUMass 2016, winner of MITRE Award for Project in Best Interest of Community.}{Oct. 2016}
 \end{itemize}
 
-\resheading{Awards}
+\vspace{-11pt}\resheading{Awards}\vspace{-11pt}
 
-\begin{itemize}
-\item
-\ressubheadingNONITtwo{Best Open Dataset Award}{Network Traffic Measurement and Analysis Conference (TMA)}{}{Jun. 2020}
-\item
-\ressubheadingNONITtwo{ACM SIGCOMM/IMC Shadow TPC Travel Grant}{Association for Computing Machinery}{}{Jul. 2018}
-\item
-\ressubheadingNONITtwo{Bay State Master's Program Scholarship}{University of Massachusetts Amherst}{}{May 2018 -- May 2019}
-\item
-\ressubheadingNONITtwo{NSF Research Experience for Undergraduates}{National Science Foundation}{}{May 2017 -- Sep. 2017}
-\item
-\ressubheadingNONITtwo{MITRE Award (STASiS)}{HackUMass}{}{Oct. 2016}
-\item
-\ressubheadingNONITtwo{Chancellor's Award Scholarship}{University of Massachusetts Amherst}{}{Sep. 2016 -- May 2018}
+\begin{itemize}[itemsep=-1mm]
+\item \ressubheadingNONITtwo{\textbf{Best Open Dataset Award}, \textit{Network TMA Conference}}{}{}{Jun. 2020}
+\item \ressubheadingNONITtwo{\textbf{ACM SIGCOMM/IMC Shadow TPC Travel Grant}, \textit{ACM}}{}{}{Jul. 2018}
+\item \ressubheadingNONITtwo{\textbf{Bay State Master's Program Scholarship}, \textit{UMass Amherst}}{}{}{May 2018 -- May 2019}
+\item \ressubheadingNONITtwo{\textbf{NSF Research Experience for Undergraduates}, \textit{NSF}}{}{}{May 2017 -- Sep. 2017}
+\item \ressubheadingNONITtwo{\textbf{MITRE Award}, \textit{HackUMass and MITRE}}{}{}{Oct. 2016}
+\item \ressubheadingNONITtwo{\textbf{Chancellor's Award Scholarship}, \textit{UMass Amherst}}{}{}{Sep. 2016 -- May 2018}
+%\item \ressubheadingNONITtwo{Best Open Dataset Award}{Network Traffic Measurement and Analysis Conference (TMA)}{}{Jun. 2020}
+%\item \ressubheadingNONITtwo{ACM SIGCOMM/IMC Shadow TPC Travel Grant}{Association for Computing Machinery}{}{Jul. 2018}
+%\item \ressubheadingNONITtwo{Bay State Master's Program Scholarship}{University of Massachusetts Amherst}{}{May 2018 -- May 2019}
+%\item \ressubheadingNONITtwo{NSF Research Experience for Undergraduates}{National Science Foundation}{}{May 2017 -- Sep. 2017}
+%\item \ressubheadingNONITtwo{MITRE Award (STASiS)}{HackUMass}{}{Oct. 2016}
+%\item \ressubheadingNONITtwo{Chancellor's Award Scholarship}{University of Massachusetts Amherst}{}{Sep. 2016 -- May 2018}
 \end{itemize}
 
 \end{document}
