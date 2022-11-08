@@ -38,7 +38,7 @@
 \setlength{\tabcolsep}{0in}
 \setlength{\textheight}{10in}
 \setlength{\textwidth}{7.8in}
-\setlength{\topmargin}{-0.5in}
+\setlength{\topmargin}{-0.65in}
 \setlength{\hoffset}{-0.43in}
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0in}
@@ -70,7 +70,7 @@
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 	\end{tabular*}
-		\vspace{-2mm}#5
+		\vspace{-1mm}#5
 }
 \newcommand{\ressubheadingfive}[5]{
 \begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
@@ -97,12 +97,11 @@
 
 \hspace{0.13in}\begin{tabular*}{7.59in}{l@{\extracolsep{\fill}}r}
 	\textbf{\huge Arun Dunna} & \textbf{\today} \\
-	Software Engineer & \href{mailto:adunna@pm.me}{adunna@pm.me} \\
-	~& \href{https://adunna.me}{https://adunna.me} \\
+	Software Engineer & \href{https://adunna.me}{https://adunna.me} $\vert$ \href{mailto:adunna@pm.me}{adunna@pm.me} \\
 \end{tabular*}
 \\
 
-\vspace{-12pt}
+\vspace{-8pt}
 
 \resheading{Education}\vspace{-6pt}
 
@@ -116,17 +115,19 @@
 
 \vspace{-14pt}\resheading{Experience}\vspace{-6pt}
 
-\begin{itemize}[itemsep=-1mm]
+\begin{itemize}[itemsep=-0.5mm]
 
 	\item[] \ressubheadingWithDescription{Meta Platforms, Inc.}{Washington, D.C. (Remote)}{Security Engineer}{April 2022 -- Current}{
-
-			~
+		\begin{expitemize}[itemsep=0mm]
+			\item Researched third-party and internal software and hardware for vulnerabilities, then compiled reports including vulns, attack vectors, suggested fixes/improvements, etc. Filed SEVs and CVEs where necessary.
+			\item Made infrastructure improvements for Offensive Security Group, ex. testing infra and process documentation.
+		\end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{Yext, Inc.}{Washington, D.C. (Remote)}{Software Engineer}{January 2021 -- April 2022}{
 
 			\begin{expitemize}[itemsep=0mm]
 				\item Built pipeline and React UI for managing and deploying models used in search engine product ``Answers''. Handles roughly 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
-				\item Worked on Java services such as Query Suggest and Spell Check, reducing build times by over 90\% and configuration read times from 160$\mu$s to 1.7$\mu$s. Contributed to new product features such as query reranking.
+				\item Worked on Java services such as Query Suggest and Spell Check, reducing build times by over 90\% and configuration read times from 160$\mu$s to 1.7$\mu$s. Contributed to new product features such as Query Reranking.
 				\item Worked on migration tooling in Go for automating move from internal systems to HashiCorp products.
 				\item Responded to incidents and vulnerabilities, such as the Log4j zero-day Log4Shell.
 			\end{expitemize}
@@ -157,6 +158,7 @@
 \vspace{-14pt}\resheading{Publications}\vspace{-6pt}
 
 \begin{enumerate}[itemsep=-1mm]
+	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Bringing Transparency to YouTube's Demonetization Algorithms}}}{}{}{ACM CSCW, November 2022}
 	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Sanitizing a View of Consumer Broadband in the United States}}}{}{}{TMA, June 2020}
 	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Characterizing the Deployment and Performance of Multi-CDNs}}}{}{}{ACM IMC, October 2018}
 	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Analyzing China's Blocking of Unpublished Tor Bridges}}}{}{}{USENIX FOCI, August 2018}
@@ -170,21 +172,21 @@
 \begin{itemize}[itemsep=-1mm]
 	\item \textbf{Languages:} C++, Hack, HTML + CSS, Java, JavaScript, Lua, PHP, Python, R, SQL
 	\item \textbf{Platforms:} Android, Unix \& Unix-like, Web, Windows
-	\item \textbf{Specializations:} Censorship systems, cryptography, Internet policy, Internet measurement, machine learning, machine learning pipelines, networks, security, Unix \& Unix-like systems
+	\item \textbf{Specializations:} Censorship systems, cryptography, Internet policy, Internet measurement, machine learning, machine learning pipelines, networks, research, security, software engineering, Unix \& Unix-like systems
 
 \end{itemize}
 
-\vspace{-14pt}\resheading{Projects}\vspace{-6pt}
+%\vspace{-14pt}\resheading{Projects}\vspace{-6pt}
 
-\begin{itemize}[itemsep=-1mm]
-	\item \ressubheadingNONIT{OverStat}{\href{https://overstat.us}{https://overstat.us}}{}{December 2020 -- Current}
-	\item \ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{https://github.com/adunna/tase}}{}{September 2018 -- February 2019}
-	\item \ressubheadingNONIT{sCTF}{\href{https://adunna.me/sctf-project/}{https://sctf.io}}{}{December 2014 -- January 2018}
+%\begin{itemize}[itemsep=-1mm]
+%	\item \ressubheadingNONIT{OverStat}{\href{https://overstat.us}{https://overstat.us}}{}{December 2020 -- Current}
+	%\item \ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{https://github.com/adunna/tase}}{}{September 2018 -- February 2019}
+%	\item \ressubheadingNONIT{sCTF}{\href{https://adunna.me/sctf-project/}{https://sctf.io}}{}{December 2014 -- January 2018}
 	      %\item \ressubheadingNONIT{Text-Audio Synchronization Engine}{\href{https://github.com/adunna/tase}{github.com/adunna/tase}}{Scalable and modular synchronization framework designed to associate positions in text with positions in corresponding audio. Primary example is timestamp position in audiobook with word position in ebook. Implemented using DeepSpeech.}{September 2018 -- February 2019}
 	      %\item \ressubheadingNONIT{sCTF}{\href{https://adunna.me/sctf-project/}{sctf.io}}{Founded online capture-the-flag competition focused on K-12 students. Largest had over 4000 competitors (K-12 and university students, industry professionals), and 56000 problem submissions.}{December 2014 -- January 2018}
 	      %\item
 	      %\ressubheadingNONIT{STASiS}{\href{https://adunna.me/stasis-project/}{adunna.me/stasis-project/}}{Situational Analysis System: A tool for automatically monitoring for specific situations, such as a fire or a drunk driver, through visual input (picture or video), machine learning, and statistical analysis, all packaged with a nice front-end. Developed in 36 hours at HackUMass 2016, winner of MITRE Award for Project in Best Interest of Community.}{October 2016}
-\end{itemize}
+%\end{itemize}
 
 % \vspace{-16pt}\resheading{Awards}\vspace{-11pt}
 
