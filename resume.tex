@@ -29,16 +29,16 @@
 %-----------------------------------------------------------
 %Margin setup
 
-\setlength{\evensidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.4in}
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
-\setlength{\oddsidemargin}{-0.25in}
+\setlength{\oddsidemargin}{-0.4in}
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{10in}
-\setlength{\textwidth}{7.8in}
-\setlength{\topmargin}{-0.65in}
+\setlength{\textheight}{10.6in}
+\setlength{\textwidth}{8.05in}
+\setlength{\topmargin}{-0.8in}
 \setlength{\hoffset}{-0.43in}
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0in}
@@ -55,35 +55,35 @@
 }\vspace{-9pt}
 }
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 \end{tabular*}}
 \newcommand{\ressubheadingMS}[5]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 		#5 & ~\\
 \end{tabular*}}
 \newcommand{\ressubheadingWithDescription}[5]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 	\end{tabular*}
 		\vspace{-1mm}#5
 }
 \newcommand{\ressubheadingfive}[5]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
     #5 & \\
 \end{tabular*}}
 \newcommand{\ressubheadingNONIT}[4]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#4} \\
 \end{tabular*}}
 \newcommand{\ressubheadingNONITtwo}[4]{
-\begin{tabular*}{7.35in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		#1 & \textit{#4} \\
 \end{tabular*}}
 
@@ -95,15 +95,15 @@
 
 \begin{document}
 
-\hspace{0.13in}\begin{tabular*}{7.59in}{l@{\extracolsep{\fill}}r}
+\hspace{0.13in}\begin{tabular*}{7.85in}{l@{\extracolsep{\fill}}r}
 	\textbf{\huge Arun Dunna} & \textbf{\today} \\
 	Software Engineer & \href{https://adunna.me}{https://adunna.me} $\vert$ \href{mailto:adunna@pm.me}{adunna@pm.me} \\
 \end{tabular*}
 \\
 
-\vspace{-8pt}
+\vspace{-10pt}
 
-\resheading{Education}\vspace{-6pt}
+\resheading{Education}\vspace{-10pt}
 
 \begin{itemize}[itemsep=0mm]
 
@@ -113,41 +113,43 @@
 
 \end{itemize}
 
-\vspace{-14pt}\resheading{Experience}\vspace{-6pt}
+\vspace{-20pt}\resheading{Experience}\vspace{-10pt}
 
-\begin{itemize}[itemsep=-0.5mm]
+\begin{itemize}[itemsep=-1mm]
 
-	\item[] \ressubheadingWithDescription{Meta Platforms, Inc.}{Washington, D.C. (Remote)}{Security Engineer}{April 2022 -- Current}{
-		\begin{expitemize}[itemsep=0mm]
-			\item Researched third-party and internal software and hardware for vulnerabilities, then compiled reports including vulns, attack vectors, suggested fixes/improvements, etc. Filed SEVs and CVEs where necessary.
-			\item Made infrastructure improvements for Offensive Security Group, ex. testing infra and process documentation.
+	\item[] \ressubheadingWithDescription{Meta Platforms, Inc.}{Remote, USA}{Security Engineer}{April 2022 -- Current}{
+		\begin{expitemize}[itemsep=-0.5mm]
+			\item Vulnerability research on internal and external software/hardware. Compiled reports including vulns, attack vectors, fixes/improvements, etc. and worked with PoCs to implement fixes. Filed relevant SEVs and CVEs.
+			\item Lead security assessments involving internal and external PoCs, and managed other engineers on assessments.
+			\item Built and maintained internal tooling (ex. assessment and artifact tracker, deep permission checker across Meta, \& others), and improved documentation and workflows for Security organization and Offensive Security Group.
+			\item Took ownership of and cleaned/maintained multiple security oncalls. Built internal process for mentorship between senior and junior engineers in security. Improved assessment prioritization framework.
 		\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{Yext, Inc.}{Washington, D.C. (Remote)}{Software Engineer}{January 2021 -- April 2022}{
+	\item[] \ressubheadingWithDescription{Yext, Inc.}{Washington, D.C.}{Software Engineer}{January 2021 -- April 2022}{
 
-			\begin{expitemize}[itemsep=0mm]
-				\item Built pipeline and React UI for managing and deploying models used in search engine product ``Answers''. Handles roughly 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
+			\begin{expitemize}[itemsep=-0.5mm]
+				\item Built pipeline and UI for managing and deploying models used in search engine product ``Answers''. Handled roughly 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
 				\item Worked on Java services such as Query Suggest and Spell Check, reducing build times by over 90\% and configuration read times from 160$\mu$s to 1.7$\mu$s. Contributed to new product features such as Query Reranking.
 				\item Worked on migration tooling in Go for automating move from internal systems to HashiCorp products.
 				\item Responded to incidents and vulnerabilities, such as the Log4j zero-day Log4Shell.
 			\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{Facebook, Inc.}{Remote}{Security Engineering Intern}{May 2020 -- August 2020}{
+	\item[] \ressubheadingWithDescription{Facebook, Inc.}{Remote, USA}{Security Engineering Intern}{May 2020 -- August 2020}{
 
-			\begin{expitemize}[itemsep=0mm]
-				\item Built Chrome extension for internal investigators to track malicious actors, such as fraudsters, across the web.
+			\begin{expitemize}[itemsep=-0.5mm]
+				\item Built Chrome extension for internal investigators to track malicious actors, ex. bad nation-states, across the web.
 				\item Found and patched various bugs, such as memory leaks, reducing CPU usage in a widely-used security library.
 			\end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{IIJ Innovation Institute Research Lab}{Tokyo, JP}{Research Intern}{June 2019 -- August 2019}{
 
-			\begin{expitemize}[itemsep=0mm]
+			\begin{expitemize}[itemsep=-0.5mm]
 				\item Published paper \textit{Sanitizing a View of Consumer Broadband in the United States} as the lead researcher, which won Best Open Dataset Award at TMA 2020.
 			\end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{University of Massachusetts Amherst}{Amherst, MA}{Research Assistant}{May 2017 -- January 2021}{
 
-			\begin{expitemize}[itemsep=0mm]
+			\begin{expitemize}[itemsep=-0.5mm]
 				\item Lead research projects and collaborated on others, resulting in 3 publications, 3 presentations, and 2 posters.
 				\item Wrote and taught 4 courses for hundreds of undergraduates, such as \textit{Digital Forensics} and \textit{Intro to Unix}.
 			\end{expitemize}
@@ -155,7 +157,7 @@
 
 \end{itemize}
 
-\vspace{-14pt}\resheading{Publications}\vspace{-6pt}
+\vspace{-20pt}\resheading{Publications}\vspace{-10pt}
 
 \begin{enumerate}[itemsep=-1mm]
 	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Bringing Transparency to YouTube's Demonetization Algorithms}}}{}{}{ACM CSCW, November 2022}
@@ -167,7 +169,7 @@
 	      %\item \textbf{Arun Dunna}, Ciar\'an O'Brien, and Phillipa Gill. Analyzing China's Blocking of Unpublished Tor Bridges. \textit{USENIX Workshop on Free and Open Communications on the Internet (FOCI)}. Baltimore, MD. August 2018. \textbf{(AR 39\%)}
 \end{enumerate}
 
-\vspace{-14pt}\resheading{Skills}\vspace{-6pt}
+\vspace{-20pt}\resheading{Skills}\vspace{-10pt}
 
 \begin{itemize}[itemsep=-1mm]
 	\item \textbf{Languages:} C++, Hack, HTML + CSS, Java, JavaScript, Lua, PHP, Python, R, SQL
