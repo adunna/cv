@@ -66,6 +66,12 @@
 		#3 & \textit{#4} \\
 		#5 & ~\\
 \end{tabular*}}
+\newcommand{\ressubheadingEDU}[6]{
+\begin{tabular*}{7.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		#3 & \textit{#4} \\
+		#5 & \textit{#6} \\
+\end{tabular*}}
 % \newcommand{\ressubheadingWithDescription}[5]{
 % \begin{tabular*}{7.6in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 % 		\textbf{#1} & #2 \\
@@ -109,47 +115,47 @@
 \end{tabular*}
 \\
 
-\vspace{-10pt}
-
-\resheading{Education}\vspace{-12pt}
-
-\begin{itemize}[itemsep=0mm,leftmargin=6mm]
-	\item[] \ressubheadingMS{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}{\textbf{\textit{Focus:}} Networks, security, machine learning, and financial modeling}\vspace{-1mm}
-	\item[] \ressubheading{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science, \textit{Minor: Mathematics}}{Aug 2016 -- May 2018}\vspace{-2mm}
-\end{itemize}
-
-\vspace{-16pt}\resheading{Experience}\vspace{-16pt}
+\vspace{-12pt}\resheading{Experience}\vspace{-16pt}
 
 \begin{itemize}[itemsep=-2mm,leftmargin=6mm]
-	\item[] \ressubheadingWithDescription{Meta Platforms, Inc.}{Remote, USA}{Security Engineer}{Apr 2022 -- Current}{
+	\item[] \ressubheadingWithDescription{Meta Platforms, Inc. \textit{(Facebook)}}{Remote, USA}{Software Engineer}{Sep 2023 -- Current}{
 		\begin{expitemize}[itemsep=-0.5mm]
-			\item Vulnerability research on internal and external software/hardware. Compiled reports (\textit{e.g.} vulns, attack vectors, and fixes/improvements) and worked with PoCs to implement fixes. Filed relevant SEVs/incidents \& CVEs.
+			\item Top performing SWE in Social Impact Products (SIP) Fundraising, building nonprofit infrastructure on FB \& IG.
+			\item Lead integrity \& security in SIP, spanning product abuse \& financial fraud. Built fraud \& abuse prevention systems.
+			\item Designed \& built key product features, \textit{e.g.} donation processing fee coverage recovering $>$ \$10.3M/yr in donations.
+			\item Planned and executed key compliance work for SIP, \textit{e.g.} DMA compliance and FB Payments relocation comms.
+			\item Removed key product launch blockers, both internally and cross-company with PayPal. Top SIP incident responder.
+			\item STO for multiple internal Fundraising initiatives, \textit{e.g.} product quality, SLAs, and organizational structure.
+		\end{expitemize}
+		}
+	\item[] \ressubheadingWithDescription{Meta Platforms, Inc. \textit{(Facebook)}}{Remote, USA}{Security Engineer}{Apr 2022 -- Sep 2023}{
+		\begin{expitemize}[itemsep=-0.5mm]
+			\item Vulnerability research on internal and external software/hardware. Compiled reports (\textit{e.g.} vulns, attack vectors, and fixes/improvements) and worked with PoCs to implement fixes.
 			\item Lead security assessments involving internal and external PoCs, and managed other engineers on assessments.
 			\item Built and maintained internal tooling (\textit{e.g.} assessment and artifact tracker, deep permission checker across Meta, and others), and improved documentation and workflows for Security organization and Offensive Security Group.
 			\item Took ownership of and cleaned/maintained multiple security oncalls. Built internal process for mentorship between senior and junior engineers in offensive security. Improved assessment prioritization framework for business goals.
 		\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{Champria \textnormal{\textit{(Startup)}}}{Remote, USA}{Consulting CTO / Tech Lead}{Sep 2021 -- Feb 2022}{
+	\item[] \ressubheadingWithDescription{Champria \textnormal{\textit{(Startup)}}}{Remote, USA}{Consulting CTO}{Sep 2021 -- Feb 2022}{
 		\begin{expitemize}[itemsep=-0.5mm]
-			\item Designed and built foundations for infrastructure, products, and tech stack, then oversaw all development. System design and tech stack for all tech aspects, \textit{e.g.} web products, infrastructure hosted on AWS using HashiCorp products for orchestration, custom-built CI/CD pipelines, robust GraphQL-based APIs for both internal and external use, high-performance database architectures with Postgres, \& significant internal tooling.
+			\item Designed and built foundations for infrastructure, products, and tech stack, then oversaw all development. System design and tech stack for all tech aspects, \textit{e.g.} web products, infrastructure hosted on AWS using HashiCorp products for orchestration, custom-built CI/CD pipelines, robust GraphQL-based APIs for both internal and external use, high-performance database architectures with Postgres, and significant internal tooling.
 			\item Worked with CEO, growth \& design departments to rollout iterations of company's Esports analytics platform.
-			\item Wrote all company technical guidelines, \textit{e.g.} engineer performance review cycles, and documentation guidelines.
+			\item Wrote all company technical guidelines, \textit{e.g.} engineer performance review process and documentation guidelines.
 			\item Managed lead engineer \& 5 software engineers, incl. advising, performance improvement plans, and code reviews.
-			\item Instilled positive company culture \& improvement-based development environment for engineers through policies.
 		\end{expitemize}
 	}
 	\item[] \ressubheadingWithDescription{Yext, Inc.}{Washington, D.C.}{Software Engineer}{Jan 2021 -- Apr 2022}{
 			\begin{expitemize}[itemsep=-0.5mm]
 				\item Built pipeline and React-based UI for managing and deploying models used in search engine product ``Answers''. Handled roughly 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
-				\item Worked on Java services such as Query Suggest and Spell Check, reducing build times by over 90\% and configuration read times from 160$\mu$s to 1.7$\mu$s. Contributed to new product features such as Query Reranking.
-				\item Worked on migration tooling in Go for automating move from internal systems to HashiCorp products.
-				\item Responded to incidents and vulnerabilities, such as the Log4j zero-day Log4Shell.
+				\item Optimized Java services Query Suggest and Spell Check, reducing build opex by 90\% and query latency by 98\%.
+				\item Built and deployed Query Reranking product feature, drastically improving search result CTR.
+				\item Built migration tooling in Go to automate move from internal systems to HashiCorp products.
+				\item Responded to incidents and vulnerabilities, such as product outages and the Log4j zero-day Log4Shell.
 			\end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{University of Massachusetts Amherst}{Amherst, MA}{Course Instructor}{Jan 2019 -- Dec 2020}{
 			\begin{expitemize}[itemsep=-0.5mm]
-				\item Wrote \& taught courses \textit{CS 365: Digital Forensics}, \textit{CS 197U: Intro. to Unix}, and \textit{CICS 191: First Year Seminar}.
-				\item Managed 12 undergrad/grad course assistants \& graders for my courses. Held office hours \& advised students.
+				\item Wrote \& taught courses \textit{Digital Forensics}, \textit{Intro. to Unix}, and \textit{CS First Year Seminar}. Managed 12 TAs and UCAs.
 			\end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{Facebook, Inc.}{Remote, USA}{Security Engineering Intern}{May 2020 -- Aug 2020}{
@@ -166,12 +172,21 @@
 			% \end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{University of Massachusetts Amherst}{Amherst, MA}{Research Assistant}{May 2017 -- Dec 2020}{
-		~\vspace{3mm}
+		~\vspace{2mm}
 			% \begin{expitemize}[itemsep=-0.5mm]
 			% 	\item Lead research projects and collaborated on others, resulting in 3 publications, 3 presentations, and 2 posters.
 			% 	\item Wrote and taught 4 courses for hundreds of undergraduates, such as \textit{Digital Forensics} and \textit{Intro to Unix}.
 			% \end{expitemize}
 		}
+\end{itemize}
+
+\vspace{-16pt}\resheading{Education}\vspace{-12pt}
+
+\begin{itemize}[itemsep=0mm,leftmargin=6mm]
+	%\item[] \ressubheadingMS{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}{\textbf{\textit{Focus:}} Networks, security, machine learning, and financial modeling}\vspace{-1mm}
+	%\item[] \ressubheading{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}\vspace{-1mm}
+	%\item[] \ressubheading{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science, \textit{Minor: Mathematics}}{Aug 2016 -- May 2018}\vspace{-2mm}
+	\item[] \ressubheadingEDU{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}{B.S. Computer Science, \textit{Minor: Mathematics}}{Aug 2016 -- May 2018}\vspace{-2mm}
 \end{itemize}
 
 \vspace{-16pt}\resheading{Publications}\vspace{-16pt}
@@ -186,12 +201,12 @@
 	      %\item \textbf{Arun Dunna}, Ciar\'an O'Brien, and Phillipa Gill. Analyzing China's Blocking of Unpublished Tor Bridges. \textit{USENIX Workshop on Free and Open Communications on the Internet (FOCI)}. Baltimore, MD. August 2018. \textbf{(AR 39\%)}
 \end{enumerate}
 
-\vspace{-16pt}\resheading{Skills}\vspace{-16pt}
+\vspace{-20pt}\resheading{Skills}\vspace{-16pt}
 
 \begin{itemize}[itemsep=-1mm,leftmargin=10mm]
-	\item \textbf{Languages:} C++, Go, GraphQL, Hack, HTML + CSS, Java, JavaScript, Lua, PHP, Python, R, SQL, TypeScript
-	\item \textbf{Platforms:} Android, MacOS, Unix \& Unix-like, Web (Django, Flask, NextJS, Node, React), Windows
-	\item \textbf{Specializations:} Censorship systems, full-stack development, Internet policy, Internet measurement, machine learning, ML pipelines, networks, research, security, software engineering, Unix \& Unix-like systems
+	\item \textbf{Languages:} C++, CSS, Go, GraphQL, Hack, HTML, Java, JS, Lua, PHP, Python, R, Rust, SQL, TypeScript
+	\item \textbf{Platforms:} Android, iOS, MacOS, Unix \& Unix-like, Web (Django, Flask, NextJS, Node, React), Windows
+	\item \textbf{Specializations:} Censorship systems, full-stack development, Internet policy, Internet measurement, machine learning, ML pipelines, networks, product work, research, security, software engineering, Unix \& Unix-like systems
 
 \end{itemize}
 

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1676602932 "/Users/adunna/git/cv/resume.tex" "/Users/adunna/git/cv/resume.pdf" "resume" 1676602933
-  "/Users/adunna/git/cv/resume.aux" 1676602933 781 3b97df64df25e0fa7f42296a0062e702 ""
-  "/Users/adunna/git/cv/resume.tex" 1676602932 14192 e45b9d56c9673dd5ae6e8759856a24d7 ""
+["pdflatex"] 1707239895 "/Users/adunna/git/cv/resume.tex" "/Users/adunna/git/cv/resume.pdf" "resume" 1707239895
+  "/Users/adunna/git/cv/resume.aux" 1707239895 781 3b97df64df25e0fa7f42296a0062e702 ""
+  "/Users/adunna/git/cv/resume.tex" 1707239895 15433 0935a92c0d253d9881fc28b2a46b95a1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -76,13 +76,13 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1635652681 2724746 dae202e46db4ae9e43e8e9fdab8d5c87 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "resume.aux" 1676602933 781 3b97df64df25e0fa7f42296a0062e702 "pdflatex"
-  "resume.out" 1676602933 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume.tex" 1676602932 14192 e45b9d56c9673dd5ae6e8759856a24d7 ""
+  "resume.aux" 1707239895 781 3b97df64df25e0fa7f42296a0062e702 "pdflatex"
+  "resume.out" 1707239895 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume.tex" 1707239895 15433 0935a92c0d253d9881fc28b2a46b95a1 ""
   (generated)
   "resume.out"
+  "resume.aux"
+  "/Users/adunna/git/cv/resume.pdf"
   "/Users/adunna/git/cv/resume.log"
   "resume.pdf"
-  "/Users/adunna/git/cv/resume.pdf"
-  "resume.aux"
   "resume.log"
