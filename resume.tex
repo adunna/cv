@@ -11,6 +11,9 @@
 \usepackage{lastpage}
 \usepackage{enumitem}
 \usepackage{wrapfig}
+\usepackage[style=solid|regular]{fontawesome7}
+\usepackage{array}
+\usepackage{tabularx}
 \robustify\cftdotfill
 
 \pagestyle{fancy}
@@ -81,10 +84,29 @@
 % }
 \newcommand{\ressubheadingWithDescription}[5]{
 	\begin{tabular*}{7.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-	\textbf{#1} $|$ #3 & \textit{#2} $|$ #4 \\
+	\textbf{#1} $|$ \textit{#3} & \textit{#2} $|$ #4 \\
 	\end{tabular*}
 	\vspace{-7mm}
-	#5
+	~\vspace{1mm}#5
+	\vspace{2mm}
+}
+\newcommand{\ressubheadingWithDescriptionTwo}[3]{
+	\begin{tabular*}{7.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textit{#1} & #2 \\
+	\end{tabular*}
+	\vspace{-7mm}
+	~\vspace{1mm}#3
+	\vspace{2mm}
+}
+\newcommand{\ressubheadingWithDescriptionThree}[6]{
+	\vspace{2mm}
+	\begin{tabular*}{7.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{#1} $|$ #2 & \textit{#3}\vspace{1.5mm} \\
+	\vspace{1mm}\textit{#4} & #5 \\
+	\end{tabular*}
+	\vspace{-7mm}
+	~\vspace{3mm}#6
+	\vspace{2mm}
 }
 \newcommand{\ressubheadingfive}[5]{
 \begin{tabular*}{7.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
@@ -109,70 +131,66 @@
 
 \begin{document}
 
-\hspace{0.13in}\begin{tabular*}{7.9in}{l@{\extracolsep{\fill}}r}
-	\textbf{\huge Arun Dunna} & \textbf{\today} \\
-	Software / Security Engineer & \href{https://adunna.me}{https://adunna.me} $\vert$ \href{mailto:adunna@pm.me}{adunna@pm.me} \\
-\end{tabular*}
+% \hspace{0.13in}\begin{tabular*}{7.9in}{l@{\extracolsep{\fill}}r}
+% 	\textbf{\huge Arun Dunna} & \textit{Updated \today} \\
+% 	% Software / Security Engineer & \href{https://adunna.me}{https://adunna.me} $\vert$ \href{mailto:adunna@pm.me}{adunna@pm.me} \\
+% 	Software / Security Engineer & \href{https://www.linkedin.com/in/adunna/}{{\large \faIcon{linkedin}} @adunna} \hspace{1mm} \href{mailto:adunna@pm.me}{{\large \faIcon{square-envelope}} adunna@pm.me} \\
+% \end{tabular*}
+\hspace{0.13in}\begin{tabular}{m{0.32\linewidth}m{0.33\linewidth}m{0.33\linewidth}}
+\raggedright {\large Software / Security Engineer} & \centering \textbf{\huge Arun Dunna} & \raggedleft \href{https://www.linkedin.com/in/adunna/}{{\large \faIcon{linkedin}} @adunna} \hspace{1mm} \href{mailto:adunna@pm.me}{{\large \faIcon{square-envelope}} adunna@pm.me} \\
+\end{tabular}
 \\
 
 \vspace{-12pt}\resheading{Experience}\vspace{-16pt}
 
 \begin{itemize}[itemsep=-2mm,leftmargin=6mm]
-	\item[] \ressubheadingWithDescription{Meta Platforms, Inc. \textit{(Facebook)}}{Remote, USA}{Senior Software Engineer}{Sep 2023 -- Current}{
+	\item[] \ressubheadingWithDescriptionThree{Meta \textit{(fka Facebook)}}{Staff Software Engineer}{Remote (Raleigh NC), USA}{Tech Lead (Software Engineer), Youth}{May 2024 -- Current}{
 		\begin{expitemize}[itemsep=-0.5mm]
-			\item Leading cross-disciplinary/XFN team to de-risk teen products for regulatory compliance, security, privacy, and integrity. Responding to high severity incidents. Resolved $>$ \$500M in risk exposure to Meta (\textit{e.g.} fines).
-			\item Top performing SWE in Social Impact Products (SIP) Fundraising, building nonprofit infrastructure on FB \& IG.
-			\item Lead SIP integrity \& security (product abuse \& financial fraud). Built X-company fraud \& abuse prevention.
-			\item Designed \& built key product features, \textit{e.g.} donation processing fee coverage recovering $>$ \$10.3M/yr in donations.
-			\item Planned and executed key compliance work for SIP, \textit{e.g.} DMA compliance and FB Payments relocation.
-			\item STO for multiple internal Fundraising initiatives, \textit{e.g.} product quality, SLAs, and organizational structure.
+			\item Lead cross-Meta, multidisciplinary (security \& privacy engineering, software engineering, UXR, \dots) team of more than 10 staff+ ICs to de-risk teen products across highly technical regulatory compliance, security, privacy, and integrity problems at scale. Built and scaled from $0 \rightarrow 1$ (staffing, mission, roadmaps, etc.).
+			\item Define responses for high severity compliance and reputational incidents, including long-term recovery, media response, product direction, and technical solutions. Resolved $>$ \$1B in risk exposure to Meta (\textit{e.g.} fines).
+			\item Scope X-Meta Youth products, infrastructure, \& regulatory responses on Facebook, Instagram, and GenAI.
+			\item Define Meta's research and technical strategy for ``unruly teens'' on social media. Define security strategy for Youth.
 		\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{Meta Platforms, Inc. \textit{(Facebook)}}{Remote, USA}{Security Engineer}{Apr 2022 -- Sep 2023}{
+	\item[] \ressubheadingWithDescriptionTwo{Tech Lead (Software Engineer), Nonprofits Integrity}{Sep 2023 -- May 2024}{
 		\begin{expitemize}[itemsep=-0.5mm]
-			\item Vulnerability research on internal and external software/hardware. Compiled reports (\textit{e.g.} vulns, attack vectors, and fixes/improvements) and worked with PoCs to implement fixes.
-			\item Lead security assessments involving internal and external PoCs, and managed other engineers on assessments.
-			\item Built and maintained internal tooling (\textit{e.g.} assessment and artifact tracker, deep permission checker across Meta, and others), and improved documentation and workflows for Security organization and Offensive Security Group.
-			\item Took ownership of and cleaned/maintained multiple security oncalls. Built internal process for mentorship between senior and junior engineers in offensive security. Improved assessment prioritization framework for business goals.
+			\item Led Nonprofits integrity \& security (product abuse \& financial fraud), saving Meta $>$ \$11M/yr and reducing donation fraud by $\sim$80\%. Built X-company (Meta \& PayPal) fraud \& abuse prevention systems and ops flows.
+			\item Designed \& built donation processing fee coverage feature, saving Meta $>$ \$10.3M/yr.
+			\item Led compliance responses for Nonprofits, including DMA compliance and FB Payments restructuring.
 		\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{Champria \textnormal{\textit{(Startup)}}}{Remote, USA}{Consulting CTO}{Sep 2021 -- Feb 2022}{
+	\item[] \ressubheadingWithDescriptionTwo{Security Engineer, Offensive Security Group}{Apr 2022 -- Sep 2023}{
 		\begin{expitemize}[itemsep=-0.5mm]
-			\item Designed and built foundations for infrastructure, products, and tech stack, then oversaw all development. System design and tech stack for all tech aspects, \textit{e.g.} web products, infrastructure hosted on AWS using HashiCorp products for orchestration, custom-built CI/CD pipelines, robust GraphQL-based APIs for both internal and external use, high-performance database architectures with Postgres, and significant internal tooling.
-			\item Worked with CEO, growth \& design departments to rollout iterations of company's Esports analytics platform.
-			\item Wrote all company technical guidelines, \textit{e.g.} engineer performance review process and documentation guidelines.
-			\item Managed lead engineer \& 5 software engineers, incl. advising, performance improvement plans, and code reviews.
+			\item Vulnerability research on internal and external software/hardware. Wrote reports (\textit{e.g.} vulnerabilities, attack vectors, and fixes/improvements) and scoped solutions across Meta.
+			\item Designed and built systems to integrate hierarchical security surface tracking with internal tooling, used across Meta as primary vulnerability management infrastructure.
+			\item Built vulnerability assessment/artifact tracking infrastructure \& deep ACL screener across Meta.
 		\end{expitemize}
-	}
+		}
 	\item[] \ressubheadingWithDescription{Yext, Inc.}{Washington, D.C.}{Software Engineer}{Jan 2021 -- Apr 2022}{
 			\begin{expitemize}[itemsep=-0.5mm]
-				\item Built pipeline and React-based UI for managing and deploying models used in search engine product ``Answers''. Handled roughly 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
-				\item Optimized Java services Query Suggest and Spell Check, reducing build opex by 90\% and query latency by 98\%.
+				\item Built pipeline and React UI for managing and deploying models used in search engine product ``Answers''. Served 800 models across 16 environments, with an average latency of $\approx$20ms per model query.
+				\item Owned optimizations for Query Suggest and Spell Check, reducing build opex by 90\% and query latency by 98\%.
 				\item Built and deployed Query Reranking product feature, drastically improving search result CTR.
-				\item Built migration tooling in Go to automate move from internal systems to HashiCorp products.
-				\item Responded to incidents and vulnerabilities, such as product outages and the Log4j zero-day Log4Shell.
+				\item Responded to incidents and vulnerabilities, including product outages and zero-days (\textit{e.g.} Log4j Log4Shell).
 			\end{expitemize}
 		}
-	\item[] \ressubheadingWithDescription{University of Massachusetts Amherst}{Amherst, MA}{Course Instructor}{Jan 2019 -- Dec 2020}{
-			\begin{expitemize}[itemsep=-0.5mm]
-				\item Wrote \& taught courses \textit{Digital Forensics}, \textit{Intro. to Unix}, and \textit{CS First Year Seminar}. Managed 12 TAs and UCAs.
-			\end{expitemize}
+	\item[] \ressubheadingWithDescription{UMass Amherst}{Amherst, MA}{Lecturer (Digital Forensics, Intro to Unix)}{Jan 2019 -- Dec 2020}{	
+		% \begin{expitemize}[itemsep=-0.5mm]
+			% 	\item Wrote \& taught courses \textit{Digital Forensics}, \textit{Intro. to Unix}, and \textit{CS First Year Seminar}. Managed 12 TAs and UCAs.
+			% \end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{Facebook, Inc.}{Remote, USA}{Security Engineering Intern}{May 2020 -- Aug 2020}{
-		~\vspace{3mm}
 			% \begin{expitemize}[itemsep=-0.5mm]
-			% 	\item Built Chrome extension for internal investigators to track malicious actors, ex. bad nation-states, across the web.
-			% 	\item Found and patched various bugs, such as memory leaks, reducing CPU usage in a widely-used security library.
+			% 	\item Built Chrome extension for internal investigators to track malicious actors, \textit{e.g.} bad nation-states, across the web.
+			% 	\item Optimized core internal security libraries, leading to compute cost savings of $>$ \$5M annually.
 			% \end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{IIJ Innovation Institute Research Lab}{Tokyo, JP}{Research Intern}{Jun 2019 -- Aug 2019}{
-		~\vspace{3mm}
 			% \begin{expitemize}[itemsep=-0.5mm]
 			% 	\item Published paper \textit{Sanitizing a View of Consumer Broadband in the United States} as the lead researcher, which won Best Open Dataset Award at TMA 2020.
 			% \end{expitemize}
 		}
 	\item[] \ressubheadingWithDescription{University of Massachusetts Amherst}{Amherst, MA}{Research Assistant}{May 2017 -- Dec 2020}{
-		~\vspace{2mm}
 			% \begin{expitemize}[itemsep=-0.5mm]
 			% 	\item Lead research projects and collaborated on others, resulting in 3 publications, 3 presentations, and 2 posters.
 			% 	\item Wrote and taught 4 courses for hundreds of undergraduates, such as \textit{Digital Forensics} and \textit{Intro to Unix}.
@@ -180,35 +198,33 @@
 		}
 \end{itemize}
 
-\vspace{-16pt}\resheading{Education}\vspace{-12pt}
+\vspace{-12pt}\resheading{Education}\vspace{-12pt}
 
 \begin{itemize}[itemsep=0mm,leftmargin=6mm]
 	%\item[] \ressubheadingMS{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}{\textbf{\textit{Focus:}} Networks, security, machine learning, and financial modeling}\vspace{-1mm}
 	%\item[] \ressubheading{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}\vspace{-1mm}
 	%\item[] \ressubheading{University of Massachusetts Amherst}{Amherst, MA}{B.S. Computer Science, \textit{Minor: Mathematics}}{Aug 2016 -- May 2018}\vspace{-2mm}
-	\item[] \ressubheadingEDU{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{May 2018 -- Dec 2020}{B.S. Computer Science, \textit{Minor: Mathematics}}{Aug 2016 -- May 2018}\vspace{-2mm}
+	\item[] \ressubheadingEDU{University of Massachusetts Amherst}{Amherst, MA}{M.S. Computer Science}{Dec 2020}{B.S. Computer Science, \textit{Minor: Mathematics}}{May 2018}\vspace{-2mm}
 \end{itemize}
 
-\vspace{-16pt}\resheading{Publications}\vspace{-16pt}
+\vspace{-12pt}\resheading{Skills}\vspace{-12pt}
+
+\begin{itemize}[itemsep=-1mm,leftmargin=10mm]
+	\item \textbf{Specialties:} Policy/regulatory \& product intersections, building and scaling teams/products, XFN partnerships, risk management, Youth, GenAI, full-stack engineering, networks, research, security, reverse engineering
+	\item \textbf{Languages:} Python, PHP/Hack, HTML/CSS/JS, C++, GraphQL, Java, Lua, R, SQL
+\end{itemize}
+
+\vspace{-12pt}\resheading{Publications}\vspace{-12pt}
 
 \begin{enumerate}[itemsep=-1mm,leftmargin=11mm]
-	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Bringing Transparency to YouTube's Demonetization Algorithms}}}{}{}{ACM CSCW, \textnormal{Nov 2022}}
-	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Sanitizing a View of Consumer Broadband in the United States}}}{}{}{TMA, \textnormal{Jun 2020}}
-	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Characterizing the Deployment and Performance of Multi-CDNs}}}{}{}{ACM IMC, \textnormal{Oct 2018}}
-	\item \ressubheadingNONITtwo{\href{https://adunna.me/publications/}{\textbf{Analyzing China's Blocking of Unpublished Tor Bridges}}}{}{}{USENIX FOCI, \textnormal{Aug 2018}}
+	\item \ressubheadingNONITtwo{\href{https://dl.acm.org/doi/pdf/10.1145/3555209}{\textbf{Bringing Transparency to YouTube's Demonetization Algorithms}}}{}{}{ACM CSCW, \textnormal{Nov 2022}}
+	\item \ressubheadingNONITtwo{\href{https://www.iijlab.net/en/members/romain/pdf/dunna_tma2020.pdf}{\textbf{Sanitizing a View of Consumer Broadband in the United States}}}{}{}{TMA, \textnormal{Jun 2020}}
+	\item \ressubheadingNONITtwo{\href{https://par.nsf.gov/servlets/purl/10086200}{\textbf{Characterizing the Deployment and Performance of Multi-CDNs}}}{}{}{ACM IMC, \textnormal{Oct 2018}}
+	\item \ressubheadingNONITtwo{\href{https://www.usenix.org/system/files/conference/foci18/foci18-paper-dunna.pdf}{\textbf{Analyzing China's Blocking of Unpublished Tor Bridges}}}{}{}{USENIX FOCI, \textnormal{Aug 2018}}
 	      %\item \textbf{Arun Dunna}, Zachary Bischof, and Romain Fontugne. Sanitizing a View of Consumer Broadband in the United States. \textit{Network Traffic Measurement and Analysis Conference (TMA)}. Berlin, Germany. June 2020. \textbf{(AR 33\%, Best Open Dataset Award)}
 	      %\item Rachee Singh, \textbf{Arun Dunna}, and Phillipa Gill. Characterizing the Deployment and Performance of Multi-CDNs. \textit{ACM Internet Measurement Conference (IMC)}. Boston, MA. October 2018. \textbf{(AR 23\%)}
 	      %\item \textbf{Arun Dunna}, Ciar\'an O'Brien, and Phillipa Gill. Analyzing China's Blocking of Unpublished Tor Bridges. \textit{USENIX Workshop on Free and Open Communications on the Internet (FOCI)}. Baltimore, MD. August 2018. \textbf{(AR 39\%)}
 \end{enumerate}
-
-\vspace{-20pt}\resheading{Skills}\vspace{-16pt}
-
-\begin{itemize}[itemsep=-1mm,leftmargin=10mm]
-	\item \textbf{Languages:} C++, CSS, Go, GraphQL, Hack, HTML, Java, JS, Lua, PHP, Python, R, Rust, SQL, TypeScript
-	\item \textbf{Platforms:} Android, iOS, MacOS, Unix \& Unix-like, Web (Django, Flask, NextJS, Node, React), Windows
-	\item \textbf{Specializations:} Censorship systems, full-stack development, Internet policy, Internet measurement, machine learning, ML pipelines, networks, product work, research, security, software engineering, Unix \& Unix-like systems
-
-\end{itemize}
 
 %\vspace{-14pt}\resheading{Projects}\vspace{-6pt}
 
